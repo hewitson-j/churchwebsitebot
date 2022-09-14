@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+<category>
+  <pattern>START</pattern>
+  <template>
+    Welcome to the Church of Jesus Christ website! My name is Peter. I'll be helping you today. 
+    Also at any time, feel free to type in a keyword for what you're looking for and I'll try and get you to the right page.
+    <button>
+      <text>Ok!</text>
+      <postback>OK</postback>
+    </button>
+  </template>
+</category>
+    
+    <!-- Initial Menu -->
+  <category>
+      <pattern>OK</pattern>
+      <template>What are you looking for today?
+    <button>
+      <text>Scriptures</text>
+      <postback>SCRIPTURES</postback>
+    </button>
+    <button>
+      <text>General Conference Talks</text>
+      <postback>TALKS</postback>
+    </button>
+    <button>
+      <text>Songs and Hymns</text>
+      <postback>SONGS</postback>
+    </button>
+      </template>
+  </category>
+  
+    <!-- Scriptures Menu -->
+  <category>
+      <pattern>SCRIPTURES</pattern>
+      <template>Ok! Which scriptures were you looking for?
+    <button>
+      <text>Book of Mormon</text>
+      <postback>MORMON</postback>
+    </button>
+    <button>
+      <text>Bible</text>
+      <postback>BIBLE</postback>
+    </button>
+    <button>
+      <text>Doctrine and Covenants</text>
+      <postback>DANDC</postback>
+    </button>
+    <button>
+      <text>Pearl of Great Price</text>
+      <postback>PEARL</postback>
+    </button>
+      </template>
+  </category>
+  
+    <!-- Bible Menu -->
+    <category>
+      <pattern>BIBLE</pattern>
+      <template>Ok! Are you looking for the New Testament or Old Testament?
+    <button>
+      <text>Old Testament</text>
+      <postback>OT</postback>
+    </button>
+    <button>
+      <text>New Testament</text>
+      <postback>NT</postback>
+    </button>
+      </template>
+  </category>
+  
+    <!-- New Testament Link Menu -->
+    <category>
+      <pattern>NT</pattern>
+      <template>Ok awesome! I've prepared a button to bring you to the online New Testament.
+      <button>
+          <text>Let's read!</text>
+          <url>https://www.churchofjesuschrist.org/study/scriptures/nt?lang=eng</url>
+      </button>
+      </template>
+  </category>
+    <category>
+      <pattern>NEW TESTAMENT</pattern>
+      <template>
+          <srai>NT</srai>
+      </template>
+  </category>
+    <category>
+      <pattern>NEWTESTAMENT</pattern>
+      <template>          
+        <srai>NT</srai>
+      </template>
+  </category>
+  
+      <!-- Old Testament Link Menu -->
+    <category>
+      <pattern>OT</pattern>
+      <template>Ok awesome! I've prepared a button to bring you to the online Old Testament.
+      <button>
+          <text>Let's read!</text>
+          <url>https://www.churchofjesuschrist.org/study/scriptures/ot?lang=eng</url>
+      </button>
+      </template>
+  </category>
+    <category>
+      <pattern>OLD TESTAMENT</pattern>
+      <template>
+          <srai>OT</srai>
+      </template>
+  </category>
+    <category>
+      <pattern>OLDTESTAMENT</pattern>
+      <template>          
+        <srai>OT</srai>
+      </template>
+  </category>
+    
+  
+    <!-- Book of Mormon Link Menu -->
+  <category>
+      <pattern>MORMON</pattern>
+      <template>Ok awesome! I've prepared a button to bring you to the online Book of Mormon.
+      <button>
+          <text>Let's read!</text>
+          <url>https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng</url>
+      </button>
+      </template>
+  </category>
+    <category>
+      <pattern>BOOK OF MORMON</pattern>
+      <template>
+          <srai>MORMON</srai>
+        </template>
+  </category>
+    <category>
+      <pattern>BOM</pattern>
+      <template>
+        <srai>MORMON</srai>
+      </template>
+  </category>
+  
+    <!-- D&C Link Menu -->
+    <category>
+      <pattern>DANDC</pattern>
+      <template>Ok awesome! I've prepared a button to bring you to the online Doctrine and Covenants.
+      <button>
+          <text>Let's read!</text>
+          <url>https://www.churchofjesuschrist.org/study/scriptures/dc-testament?lang=eng</url>
+      </button>
+      </template>
+  </category>
+    <category>
+      <pattern>DOCTRINE AND COVENANTS</pattern>
+      <template>
+          <srai>DANDC</srai>
+      </template>
+  </category>
+    <category>
+      <pattern>D AND C</pattern>
+      <template>
+        <srai>DANDC</srai>
+      </template>
+  </category>
+  
+      <!-- Pearl of Great Price Link Menu -->
+    <category>
+      <pattern>PEARL</pattern>
+      <template>Ok awesome! I've prepared a button to bring you to the online Pearl of Great Price.
+      <button>
+          <text>Let's read!</text>
+          <url>https://www.churchofjesuschrist.org/study/scriptures/dc-testament?lang=eng</url>
+      </button>
+      </template>
+  </category>
+    <category>
+      <pattern>PEARL OF GREAT PRICE</pattern>
+      <template>
+          <srai>PEARL</srai>
+      </template>
+  </category>
+    <category>
+      <pattern>POGP</pattern>
+      <template>
+        <srai>PEARL</srai>
+      </template>
+  </category>
+  
+    <!-- General Conference Talks Menu -->
+  <category>
+      <pattern>TALKS</pattern>
+      <template>Ok! Were you looking for a particular speaker or just in general?
+    <button>
+      <text>Specific Speaker</text>
+      <postback>SPECIFIC</postback>
+    </button>
+    <button>
+      <text>No one in particular</text>
+      <postback>NOSPECIFIC</postback>
+    </button>
+      </template>
+  </category>
+  
+  <!-- No specific speaker Menu -->
+  <category>
+      <pattern>NOSPECIFIC</pattern>
+      <template> Sounds good! I'll bring you to the main General Conference menu then.
+          <button>
+              <text>Let's go!</text>
+              <url>https://www.churchofjesuschrist.org/study/general-conference?lang=eng</url>
+          </button>
+      </template>
+  </category>
+  <category>
+      <pattern>NO ONE</pattern>
+      <template>
+          <srai>NOSPECIFIC</srai>
+      </template>
+  </category>
+  <category>
+      <pattern>PARTICULAR</pattern>
+      <template>
+          <srai>NOSPECIFIC</srai>
+      </template>
+  </category>
+  
+  <!--Specific speaker menu-->
+  <category>
+      <pattern>SPECIFIC</pattern>
+      <template>Ok! Which speaker's talks would you like to hear?
+      <button>
+          <text>President Nelson</text>
+          <postback>NELSON</postback>
+      </button>
+      <button>
+          <text>Elder Eyring</text>
+          <postback>EYRING</postback>
+      </button>
+      <button>
+          <text>Elder Oaks</text>
+          <postback>OAKS</postback>
+      </button>
+      <button>
+          <text>Elder Ballard</text>
+          <postback>BALLARD</postback>
+      </button>
+      <button>
+          <text>Elder Holland</text>
+          <postback>HOLLAND</postback>
+      </button>
+      <button>
+          <text>Elder Uchtdorf</text>
+          <postback>UCHTDORF</postback>
+      </button>
+      <button>
+          <text>Other</text>
+          <postback>OTHERSPEAKER</postback>
+      </button>
+      </template>
+  </category>
+  <category>
+      <pattern>NELSON</pattern>
+      <template>Ok! Let's get you to President Nelson's talks.
+      <button>
+          <text>Let's go!</text>
+          <url>https://www.churchofjesuschrist.org/study/general-conference/speakers/russell-m-nelson?lang=eng</url>
+      </button>
+      </template>
+  </category>
+    <category>
+      <pattern>EYRING</pattern>
+      <template>Ok! Let's get you to Elder Eyring's talks.
+      <button>
+          <text>Let's go!</text>
+          <url>https://www.churchofjesuschrist.org/study/general-conference/speakers/henry-b-eyring?lang=eng</url>
+      </button>
+      </template>
+  </category>
+    <category>
+      <pattern>OAKS</pattern>
+      <template>Ok! Let's get you to Elder Oaks's talks.
+      <button>
+          <text>Let's go!</text>
+          <url>https://www.churchofjesuschrist.org/study/general-conference/speakers/dallin-h-oaks?lang=eng</url>
+      </button>
+      </template>
+  </category>
+      <category>
+      <pattern>BALLARD</pattern>
+      <template>Ok! Let's get you to Elder Ballard's talks.
+      <button>
+          <text>Let's go!</text>
+          <url>https://www.churchofjesuschrist.org/study/general-conference/speakers/m-russell-ballard?lang=eng</url>
+      </button>
+      </template>
+  </category>
+      <category>
+      <pattern>HOLLAND</pattern>
+      <template>Ok! Let's get you to Elder Holland's talks.
+      <button>
+          <text>Let's go!</text>
+          <url>https://www.churchofjesuschrist.org/study/general-conference/speakers/jeffrey-r-holland?lang=eng</url>
+      </button>
+      </template>
+  </category>
+      <category>
+      <pattern>UCHTDORF</pattern>
+      <template>Ok! Let's get you to Elder Uchtdorf's talks.
+      <button>
+          <text>Let's go!</text>
+          <url>https://www.churchofjesuschrist.org/study/general-conference/speakers/dieter-f-uchtdorf?lang=eng</url>
+      </button>
+      </template>
+  </category>
+  
+  <!--Songs and Hymns Menu-->
+  <category>
+      <pattern>SONGS</pattern>
+      <template> Sounds good! Do you want Hymns, Primary Songs, Youth Songs, General Conference Songs, or all music?
+      <button>
+          <text>Hymns</text>
+          <postback>HYMNS</postback>
+      </button>
+      <button>
+          <text>Primary Songs</text>
+          <postback>PRIMARYSONGS</postback>
+      </button>
+      <button>
+          <text>Youth Songs</text>
+          <postback>YOUTH</postback>
+      </button>
+      <button>
+          <text>General Conference Hymns</text>
+          <postback>CONFERENCESONGS</postback>
+      </button>
+      <button>
+          <text>All Music</text>
+          <postback>ALLMUSIC</postback>
+      </button>
+      </template>
+  </category>
+  
+  <!--Songs and Hymns Responses-->
+    <category>
+        <pattern>HYMNS</pattern>
+        <template> Ok sounds good! Here's a link to all hymns.
+            <button>
+                <text>Let's go!</text>
+                <url>https://www.churchofjesuschrist.org/music/library/hymns?lang=eng</url>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>PRIMARYSONGS</pattern>
+        <template> Ok sounds good! Here's a link to all primary songs.
+            <button>
+                <text>Let's go!</text>
+                <url>https://www.churchofjesuschrist.org/music/library/childrens-songbook?lang=eng</url>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>YOUTH</pattern>
+        <template> Ok sounds good! Here's a link to all youth songs.
+            <button>
+                <text>Let's go!</text>
+                <url>https://www.churchofjesuschrist.org/music/library/music-for-youth?lang=eng</url>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>CONFERENCESONGS</pattern>
+        <template> Ok sounds good! Here's a link to all General Conference songs.
+            <button>
+                <text>Let's go!</text>
+                <url>https://www.churchofjesuschrist.org/study/general-conference/conference-music?lang=eng</url>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>ALLMUSIC</pattern>
+        <template> Ok sounds good! Here's a link to all music.
+            <button>
+                <text>Let's go!</text>
+                <url>https://www.churchofjesuschrist.org/music/library?lang=eng</url>
+            </button>
+        </template>
+    </category>
+
+  
+  <!-- Error handling in case of unexpected input -->
+  <category>
+      <pattern>*</pattern>
+      <template>Hi there! I didn't recognize that input. Feel free to type "start" to begin receiving assistance.</template>
+  </category>
+    <category>
+      <pattern>HELP</pattern>
+      <template>Hi there! To receive directions on how to interact with me, feel free to type "start" to begin.</template>
+  </category>
+  <category>
+      <pattern> PERSON </pattern>
+      <template>Sorry about that. I'll try and help you as best as I can and get you to a real person as soon as possible. What are you looking for today?
+    <button>
+      <text>Scriptures</text>
+      <postback>SCRIPTURES</postback>
+    </button>
+    <button>
+      <text>General Conference Talks</text>
+      <postback>TALKS</postback>
+    </button>
+    <button>
+      <text>Songs and Hymns</text>
+      <postback>SONGS</postback>
+    </button>
+      </template>
+  </category>
+  
+</aiml>
